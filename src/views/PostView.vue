@@ -3,7 +3,9 @@
   <p v-if="PostStore.loading">Loading...</p>
   <ul v-else>
     <li v-for="post in PostStore.posts" :key="post.id">
-      <span>{{ post.title }}</span>
+      <RouterLink :to="{ name: 'post-detail', params: { id: post.id } }">{{
+        post.title
+      }}</RouterLink>
     </li>
   </ul>
 </template>

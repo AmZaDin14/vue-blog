@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 export const usePostStore = defineStore('postStore', {
   state: () => ({
     posts: [],
+    post: null,
     loading: false,
   }),
   actions: {
@@ -15,6 +16,17 @@ export const usePostStore = defineStore('postStore', {
       const data = await res.json()
 
       this.posts = data
+      this.loading = false
+    },
+    async getPost(id: number) {
+      this.loading = true
+
+      const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      if (!res.ok) throw new Error('Failed to fetch the post')
+
+      const data = await res.json()
+      this.post = data
+
       this.loading = false
     },
   },
