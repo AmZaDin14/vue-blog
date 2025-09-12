@@ -15,6 +15,6 @@ const props = defineProps({ id: Number })
 const PostStore = usePostStore()
 
 onMounted(async () => {
-  await PostStore.getPost(props.id)
+  await PostStore.getPost(props.id!)
 })
 </script>

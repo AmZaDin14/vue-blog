@@ -1,9 +1,10 @@
+import type { Post } from '@/types/post'
 import { defineStore } from 'pinia'
 
 export const usePostStore = defineStore('postStore', {
   state: () => ({
-    posts: [],
-    post: null,
+    posts: [] as Post[],
+    post: null as Post | null,
     loading: false,
   }),
   actions: {
