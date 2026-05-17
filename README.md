@@ -1,39 +1,55 @@
-# vue-blog
+# Vue Blog
 
-This template should help get you started developing with Vue 3 in Vite.
+A minimal blog application built with Vue 3, TypeScript, and Pinia — demonstrating modern frontend patterns with the Composition API, state management, and routing.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue 3 Composition API (`<script setup>`)
+- TypeScript throughout
+- Pinia store for state management
+- Vue Router for client-side navigation
+- Vite for fast development and builds
 
-## Type Support for `.vue` Imports in TS
+## Quick Start
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+```bash
+# Install dependencies
+bun install    # or npm install
 
-## Customize configuration
+# Start dev server
+bun dev        # or npm run dev
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-bun install
+# Build for production
+bun run build  # or npm run build
 ```
 
-### Compile and Hot-Reload for Development
+## Project Structure
 
-```sh
-bun dev
+```
+├── src/
+│   ├── App.vue           # Root component
+│   ├── main.ts           # App entry point
+│   ├── router/           # Vue Router config
+│   ├── stores/           # Pinia state stores
+│   ├── types/            # TypeScript type definitions
+│   └── views/            # Page components
+├── public/               # Static assets
+├── index.html            # HTML entry point
+├── vite.config.ts        # Vite configuration
+├── tsconfig.json         # TypeScript configuration
+└── package.json
 ```
 
-### Type-Check, Compile and Minify for Production
+## Tech Stack
 
-```sh
-bun run build
-```
+- **Vue 3** — Composition API + `<script setup>`
+- **TypeScript** — full type safety
+- **Pinia** — state management
+- **Vue Router** — client-side routing
+- **Vite** — dev server + build tool
+- **ESLint** — code linting
 
-### Lint with [ESLint](https://eslint.org/)
+## Requirements
 
-```sh
-bun lint
-```
+- Node.js 18+
+- Bun (or npm/pnpm/yarn)
